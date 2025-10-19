@@ -1,0 +1,109 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  max-width: 400px;
+  min-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+.toast-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Типи повідомлень */
+.toast.error {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #51cf66, #40c057);
+  color: white;
+}
+
+.toast.warning {
+  background: linear-gradient(135deg, #ffd43b, #fab005);
+  color: #333;
+}
+
+.toast.info {
+  background: linear-gradient(135deg, #74c0fc, #339af0);
+  color: white;
+}
+
+/* Темна тема */
+.dark-theme .toast-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптивність */
+@media (max-width: 480px) {
+  .toast {
+    left: 10px;
+    right: 10px;
+    transform: none;
+    max-width: none;
+    min-width: auto;
+  }
+  
+  .toast.visible {
+    transform: translateY(0);
+  }
+  
+  .toast.hidden {
+    transform: translateY(-20px);
+  }
+}

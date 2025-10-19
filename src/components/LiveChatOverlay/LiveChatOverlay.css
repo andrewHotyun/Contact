@@ -1,0 +1,104 @@
+.live-chat-overlay-container {
+  position: absolute;
+  left: 15px;
+  width: 320px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  bottom: 50px;
+  max-height: 45%; 
+}
+
+.visible-container {
+  justify-content: flex-start; 
+  gap: 10px;
+}
+
+.hidden-container {
+  justify-content: flex-end; 
+}
+
+.live-chat-overlay-toggle-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  align-self: flex-start;
+  line-height: 32px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.live-chat-overlay-messages-list {
+  display: flex;
+  flex-direction: column; 
+  overflow-y: auto;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: opacity 0.3s ease, max-height 0.4s ease, padding 0.3s ease;
+  max-height: 300px;
+}
+
+
+
+.live-chat-overlay-messages-list.hidden {
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.live-chat-overlay-message-block {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: #333;
+  width: fit-content;
+  max-width: 100%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+.live-chat-overlay-message-block.own-message {
+  align-self: flex-start; 
+}
+
+.live-chat-overlay-sender-name {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.live-chat-overlay-message-text {
+  color: #111; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.live-chat-overlay-messages-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.live-chat-overlay-messages-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.live-chat-overlay-messages-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}

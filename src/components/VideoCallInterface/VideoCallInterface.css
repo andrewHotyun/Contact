@@ -1,0 +1,263 @@
+
+.video-call-container {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.remote-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.remote-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.waiting-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 5;
+}
+
+.status-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+.status-overlay:has(.status-message) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.status-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.status-message h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.status-message h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.status-message p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+
+.waiting-avatar {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #fff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto 0; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.local-video-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 200px; /* Збільшено для повноширинного контейнера */
+  height: 150px; /* Збільшено для повноширинного контейнера */
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.local-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px; /* Зменшено відступи між кнопками */
+  z-index: 30;
+}
+
+.control-btn {
+  width: 45px; /* Зменшено розмір кнопок */
+  height: 45px; /* Зменшено розмір кнопок */
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 20px; /* Збільшено розмір шрифту для іконок */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.control-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.control-btn .btn-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.control-btn.muted {
+  background: rgba(255, 0, 0, 0.7);
+}
+
+.control-btn.end-call {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+.control-btn.end-call:hover {
+  background: rgba(255, 0, 0, 1);
+}
+
+.control-btn.skip {
+  background: rgba(255, 193, 7, 0.8);
+  color: #fff;
+}
+
+.control-btn.skip:hover {
+  background: rgba(255, 193, 7, 1);
+  transform: scale(1.05);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .video-call-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .local-video-container {
+    width: 150px; 
+    height: 112px; 
+    top: 10px;
+    right: 10px;
+  }
+  
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .control-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .video-controls {
+    gap: 6px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .video-call-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .local-video-container {
+    width: 220px; 
+    height: 165px; 
+  }
+}
+
+@media (min-width: 1025px) {
+  .video-call-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .local-video-container {
+    width: 260px; 
+    height: 195px; 
+  }
+}
+

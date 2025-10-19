@@ -1,0 +1,22 @@
+.report-modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-details-textarea {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  min-height: 80px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.report-error {
+  color: #d9534f;
+  margin-bottom: 15px;
+}
+
