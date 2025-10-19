@@ -1,69 +1,69 @@
-# 🎥 Contact - Відеочат Додаток
+# 🎥 Contact - Video Chat Application
 
-**Contact** - це сучасний веб-додаток для відеоспілкування з випадковими людьми та друзями. Додаток дозволяє користувачам знайомитися з новими людьми через відеодзвінки, спілкуватися в реальному часі та додавати друзів.
+**Contact** is a modern web application for video communication with random people and friends. The app allows users to meet new people through video calls, chat in real-time, and add friends.
 
-## 🌟 **ОСНОВНІ ФУНКЦІЇ**
+## 🌟 **KEY FEATURES**
 
-### 🎲 **Рандомний Відеочат**
-- Випадкові відеодзвінки з незнайомими людьми по всьому світу
-- Фільтрація за країною та містом
-- Можливість пропустити поточний дзвінок
-- Система очікування з'єднання
+### 🎲 **Random Video Chat**
+- Random video calls with strangers from all over the world
+- Filter by country and city
+- Skip current call option
+- Connection waiting system
 
-### 💬 **Звичайний Чат**
-- Текстовий чат з друзями
-- Відправка файлів (зображення, відео, аудіо, документи)
-- Реакції на повідомлення (емодзі)
-- Редагування та видалення повідомлень
-- Пошук в чаті
+### 💬 **Regular Chat**
+- Text chat with friends
+- File sharing (images, videos, audio, documents)
+- Message reactions (emojis)
+- Edit and delete messages
+- Chat search
 
-### 🎥 **Відеодзвінки**
-- WebRTC відеодзвінки в реальному часі
-- Управління камерою та мікрофоном
-- Чат під час дзвінка
-- Додавання в друзі під час дзвінка
+### 🎥 **Video Calls**
+- Real-time WebRTC video calls
+- Camera and microphone control
+- Chat during calls
+- Add friends during calls
 
-### 👥 **Система Друзів**
-- Додавання та видалення друзів
-- Заявки в друзі
-- Пошук користувачів за іменем, країною, містом
-- Перегляд профілів користувачів
+### 👥 **Friends System**
+- Add and remove friends
+- Friend requests
+- Search users by name, country, city
+- View user profiles
 
-### 🔍 **Пошук та Фільтрація**
-- Глобальний пошук користувачів
-- Фільтрація за країною, містом, типом чату
-- Автодоповнення при введенні
-- Пошук в чаті
+### 🔍 **Search & Filtering**
+- Global user search
+- Filter by country, city, chat type
+- Autocomplete while typing
+- Chat search
 
-## 🛠 **ТЕХНОЛОГІЇ**
+## 🛠 **TECHNOLOGIES**
 
 - **Frontend:** React.js, CSS3, HTML5
 - **Backend:** Firebase (Firestore, Authentication, Storage)
-- **Відеодзвінки:** WebRTC API
-- **Стилізація:** CSS Modules, Responsive Design
-- **Іконки:** React Icons
-- **Маршрутизація:** React Router
+- **Video Calls:** WebRTC API
+- **Styling:** CSS Modules, Responsive Design
+- **Icons:** React Icons
+- **Routing:** React Router
 
-## 🚀 **ШВИДКИЙ ЗАПУСК**
+## 🚀 **QUICK START**
 
-### 1. **Встановлення залежностей:**
+### 1. **Install dependencies:**
 ```bash
 npm install
 ```
 
-### 2. **Запуск HTTP версії (без камери/мікрофона):**
+### 2. **Run HTTP version (without camera/microphone):**
 ```bash
 npm start
 ```
-Відкрийте: http://localhost:3000
+Open: http://localhost:3000
 
-### 3. **Запуск HTTPS версії (з камерою/мікрофоном):**
+### 3. **Run HTTPS version (with camera/microphone):**
 ```bash
 node src/utils/https-server.js
 ```
-Відкрийте: https://localhost:3443
+Open: https://localhost:3443
 
-### 4. **Для доступу з інших пристроїв:**
+### 4. **For access from other devices:**
 ```bash
 # HTTP
 http://YOUR_IP:3000
@@ -72,14 +72,14 @@ http://YOUR_IP:3000
 https://YOUR_IP:3443
 ```
 
-## ⚙️ **НАЛАШТУВАННЯ FIREBASE**
+## ⚙️ **FIREBASE SETUP**
 
-1. **Створіть проект на Firebase Console:**
+1. **Create project on Firebase Console:**
    - https://console.firebase.google.com/
-   - Створіть новий проект
+   - Create new project
 
-2. **Налаштуйте Firestore Database:**
-   - Rules → замініть на:
+2. **Configure Firestore Database:**
+   - Rules → replace with:
    ```javascript
    rules_version = '2';
    service cloud.firestore {
@@ -91,60 +91,60 @@ https://YOUR_IP:3443
    }
    ```
 
-3. **Оновіть конфігурацію:**
-   - Замініть дані в `src/utils/firebase.js`
+3. **Update configuration:**
+   - Replace data in `src/utils/firebase.js`
 
-## 📱 **ЯК КОРИСТУВАТИСЯ**
+## 📱 **HOW TO USE**
 
-### **Реєстрація:**
-1. Введіть ім'я, email, пароль
-2. Виберіть країну та місто
-3. Виберіть тип чату (відео/аудіо/текст)
-4. Завантажте аватарку
+### **Registration:**
+1. Enter name, email, password
+2. Select country and city
+3. Choose chat type (video/audio/text)
+4. Upload avatar
 
-### **Рандомний Відеочат:**
-1. Перейдіть на вкладку "Random Chat"
-2. Натисніть "Start Random Video Chat"
-3. Очікуйте підключення до партнера
-4. Спілкуйтеся через відео
+### **Random Video Chat:**
+1. Go to "Random Chat" tab
+2. Click "Start Random Video Chat"
+3. Wait for partner connection
+4. Chat via video
 
-### **Звичайний Чат:**
-1. Знайдіть користувача через пошук
-2. Натисніть "Chat" для початку спілкування
-3. Відправляйте повідомлення, файли, емодзі
-4. Ініціюйте відеодзвінки
+### **Regular Chat:**
+1. Find user through search
+2. Click "Chat" to start conversation
+3. Send messages, files, emojis
+4. Initiate video calls
 
-## 🔧 **СТРУКТУРА ПРОЕКТУ**
+## 🔧 **PROJECT STRUCTURE**
 
 ```
 src/
-├── components/          # React компоненти
-│   ├── ChatInterface/   # Інтерфейс чату
-│   ├── RandomChat/      # Рандомний відеочат
-│   ├── VideoCallInterface/ # WebRTC відеодзвінки
+├── components/          # React components
+│   ├── ChatInterface/   # Chat interface
+│   ├── RandomChat/      # Random video chat
+│   ├── VideoCallInterface/ # WebRTC video calls
 │   └── ...
-├── pages/              # Сторінки додатку
-├── utils/              # Утиліти та конфігурація
-└── App.js              # Головний компонент
+├── pages/              # Application pages
+├── utils/              # Utilities and configuration
+└── App.js              # Main component
 ```
 
-## 📚 **ДОКУМЕНТАЦІЯ**
+## 📚 **DOCUMENTATION**
 
-- `CODE_DOCUMENTATION.md` - Детальна документація коду
-- `backend_setup.md` - Налаштування бекенду
-- `create-ssl.sh` - Скрипт для SSL сертифікатів
+- `CODE_DOCUMENTATION.md` - Detailed code documentation
+- `backend_setup.md` - Backend setup
+- `create-ssl.sh` - SSL certificates script
 
-## 🌐 **ПІДТРИМКА БРАУЗЕРІВ**
+## 🌐 **BROWSER SUPPORT**
 
 - Chrome 80+
 - Firefox 75+
 - Safari 13+
 - Edge 80+
 
-## 📄 **ЛІЦЕНЗІЯ**
+## 📄 **LICENSE**
 
-MIT License - вільне використання для особистих та комерційних проектів.
+MIT License - free use for personal and commercial projects.
 
 ---
 
-**Створено з ❤️ для спілкування та знайомств** 🚀
+**Made with ❤️ for communication and meeting new people** 🚀
