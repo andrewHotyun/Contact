@@ -112,10 +112,14 @@
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   z-index: 10;
+  list-style: none; /* Прибираємо крапки */
+  padding: 0; /* Прибираємо відступи */
+  margin: 0; /* Прибираємо відступи */
 }
 .suggestion-item {
   padding: 10px 12px;
   cursor: pointer;
+  list-style: none; /* Прибираємо крапки */
 }
 .suggestion-item:hover {
   background: #f2f5f7;
