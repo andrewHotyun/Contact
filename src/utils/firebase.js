@@ -22,13 +22,7 @@ import { getStorage } from 'firebase/storage';
 
 // Конфігурація Firebase проекту
 const firebaseConfig = {
-  apiKey: "AIzaSyBpBJidfcoaXxrO_w5ofMJRryeDkb06G8Q",
-  authDomain: "contact-18.firebaseapp.com",
-  projectId: "contact-18",
-  storageBucket: "contact-18.firebasestorage.app",
-  messagingSenderId: "688200494135",
-  appId: "1:688200494135:web:8b31d47a80c563cc49e3b2",
-  measurementId: "G-B43DJHVXDE"
+  
 };
 
 // Ініціалізація Firebase додатку
